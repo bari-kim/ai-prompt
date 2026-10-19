@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791945120112,
+      "tag": "0000_huge_barracuda",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791947596087,
+      "tag": "0001_prompt_sequence",
+      "breakpoints": true
+    }
+  ]
+}

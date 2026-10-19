@@ -1,0 +1,19 @@
+{
+  "node": {
+    "006a5f9fba452365f90de522dca84f15f38301a164": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "(rsc)/../node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Coem%5C%5COneDrive%5C%5CDesktop%5C%5Cprojects%5C%5Cai-prompt%5C%5Cfrontend%5C%5Csrc%5C%5Capp%5C%5Cadmin%5C%5Clogout-action.ts%22%2C%5B%7B%22id%22%3A%22006a5f9fba452365f90de522dca84f15f38301a164%22%2C%22exportedName%22%3A%22logoutAction%22%2C%22filename%22%3A%22..%2FC%3A%5C%5CUsers%5C%5Coem%5C%5COneDrive%5C%5CDesktop%5C%5Cprojects%5C%5Cai-prompt%5C%5Cfrontend%5C%5Csrc%5C%5Capp%5C%5Cadmin%5C%5Clogout-action.ts%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc"
+      },
+      "filename": "../C:\\Users\\oem\\OneDrive\\Desktop\\projects\\ai-prompt\\frontend\\src\\app\\admin\\logout-action.ts",
+      "exportedName": "logoutAction"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "F+XUJLpARcb28bBAicjrKG2nv82l8oLOafnV/MA9q/A="
+}

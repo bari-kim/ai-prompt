@@ -1,0 +1,2 @@
+"use client";
+export function CopyButton({ promptId, field, text }: { promptId:string; field:"positive"|"negative"|"all"; text:string }) { const copy = async () => { await navigator.clipboard.writeText(text); await fetch(`/api/prompts/${promptId}/copy`, { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({ field }) }); alert("복사했습니다."); }; return <button className="copy-button" onClick={copy}>{field === "all" ? "전체 복사" : "Copy"}</button>; }

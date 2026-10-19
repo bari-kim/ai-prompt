@@ -1,0 +1,1 @@
+export const config = { siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000", maxImages: Number(process.env.MAX_IMAGES || 8), maxImageBytes: Number(process.env.MAX_IMAGE_BYTES || 10 * 1024 * 1024), allowedMimeTypes: ["image/jpeg", "image/png", "image/webp", "image/gif"] };

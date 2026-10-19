@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import "./globals.css";
+
+export const metadata: Metadata = { title: "AI Prompt Archive", description: "AI와 함께한 창작의 기록을 모아둔 개인 프롬프트 아카이브" };
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="ko"><body><div className="site-shell"><header className="site-header"><Link className="logo" href="/"><span className="logo-mark">✦</span> AI PROMPT ARCHIVE</Link><Link className="admin-link admin-icon-link" href="/admin" aria-label="관리자" title="관리자"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M18.93 9.13 L19.31 10.31 L21.36 10.35 L21.36 13.65 L19.31 13.69 L18.93 14.87 L18.36 15.97 L19.78 17.45 L17.45 19.78 L15.97 18.36 L14.87 18.93 L13.69 19.31 L13.65 21.36 L10.35 21.36 L10.31 19.31 L9.13 18.93 L8.03 18.36 L6.55 19.78 L4.22 17.45 L5.64 15.97 L5.07 14.87 L4.69 13.69 L2.64 13.65 L2.64 10.35 L4.69 10.31 L5.07 9.13 L5.64 8.03 L4.22 6.55 L6.55 4.22 L8.03 5.64 L9.13 5.07 L10.31 4.69 L10.35 2.64 L13.65 2.64 L13.69 4.69 L14.87 5.07 L15.97 5.64 L17.45 4.22 L19.78 6.55 L18.36 8.03 Z" /><circle cx="12" cy="12" r="3" /></svg></Link></header>{children}</div></body></html>; }

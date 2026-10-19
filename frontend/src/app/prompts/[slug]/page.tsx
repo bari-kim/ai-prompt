@@ -1,0 +1,8 @@
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { getPrompt } from "@/lib/prompt-service";
+import { Gallery } from "@/components/gallery";
+import { CopyButton } from "@/components/copy-button";
+import { ViewTracker } from "@/components/view-tracker";
+export const dynamic="force-dynamic";
+export default async function PromptDetail({params}:{params:Promise<{slug:string}>}) { const {slug}=await params; const prompt=await getPrompt(slug); if(!prompt)notFound(); const allText=prompt.negativePrompt?`Positive Prompt\n\n${prompt.positivePrompt}\n\nNegative Prompt\n\n${prompt.negativePrompt}`:prompt.positivePrompt; return <><ViewTracker promptId={prompt.id} /><main className="detail-layout"><div><Gallery images={prompt.images.map((image)=>({id:image.id,url:image.url||""}))} /><p className="detail-tags">{prompt.tags.map((tag)=>`#${tag}`).join("  ")} · {prompt.viewCount} views</p></div><div className="detail-panel"><Link className="archive-back" href="/">← Archive</Link><h1 className="detail-title">{prompt.title}</h1><p className="detail-tags">{prompt.createdAt.toLocaleDateString("ko-KR")}</p><section className="prompt-section"><div className="prompt-section-header"><h2>Positive Prompt</h2><CopyButton promptId={prompt.id} field="positive" text={prompt.positivePrompt} /></div><pre>{prompt.positivePrompt}</pre></section>{prompt.negativePrompt&&<section className="prompt-section"><div className="prompt-section-header"><h2>Negative Prompt</h2><CopyButton promptId={prompt.id} field="negative" text={prompt.negativePrompt} /></div><pre>{prompt.negativePrompt}</pre></section>}<div className="mt-6"><CopyButton promptId={prompt.id} field="all" text={allText} /></div></div></main></>; }
